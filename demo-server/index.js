@@ -46,6 +46,24 @@ app.get('/api/operation/address/country', function(req, res){
   });
 })
 
+// /api/operation/notice/page/${page}-${pageSize}/releaseTime=0
+app.get('/api/operation/notice/page/*-*/releaseTime=0', function(req, res){
+  fs.readFile(__dirname + "/" + "msg.json", 'utf8', function(err, data){
+    console.log( data );
+    res.send(data);
+  });
+})
+
+// /api/operation/notice/${id}
+app.get('/api/operation/notice/*', function(req, res){
+  fs.readFile(__dirname + "/" + "notice_detail.json", 'utf8', function(err, data){
+    console.log( data );
+    res.send(data);
+  });
+})
+
+
+
 
 
 
