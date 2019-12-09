@@ -1,16 +1,21 @@
 
 var express = require('express');
 var app = express();
-var fs = require("fs");
+const fs = require("fs");
+const process = require('process');
+
+//调试信息是通过环境变量 DEBUG 控制的
+process.env['DEBUG'] = 'express:*';
 
 app.get('/test', function (req, res) {
    fs.readFile( __dirname + "/" + "kline_contract.json", 'utf8', function (err, data) {
        console.log( data );
-       res.end( data );
+       res.send( data );
    });
 })
 
-app.get('/', function(req, res){
+app.all('/', function(req, res){
+  res.setHeader()
   res.end("Hello World");
 })
 
