@@ -4,7 +4,7 @@ var app = express();
 var fs = require("fs");
 
 app.get('/test', function (req, res) {
-   fs.readFile( __dirname + "/" + "users.json", 'utf8', function (err, data) {
+   fs.readFile( __dirname + "/" + "kline_contract.json", 'utf8', function (err, data) {
        console.log( data );
        res.end( data );
    });
