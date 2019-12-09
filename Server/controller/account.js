@@ -1,12 +1,7 @@
 // controller/account.js
+extends.kline = kline;
 
-exports.userById = userById;
-exports.createUser = createUser;
 
-function userById(req, res) {
-    res.end('滴滴答答滴滴答答滴滴答答滴滴答答滴滴答答滴滴答答滴滴答答滴滴答答.');
-}
-
-function createUser(req, res) {
-    res.end('waiting for impl.');
+function kline(req, res) {
+    res.end('kline data 请稍等了一下哦');
 }

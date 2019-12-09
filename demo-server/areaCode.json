@@ -1,0 +1,13 @@
+ {
+    "code": 200,
+    "data":[{
+        "code": 1,
+        "name": "中国",
+        "areaCode": "86"
+    },
+    {
+        "code": 2,
+        "name": "美国",
+        "areaCode": "001"
+    }]
+  }
